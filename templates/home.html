@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hambeergueria da Marina</title>
+  <style>
+    /* Adicione algum estilo para o contêiner que conterá a imagem e o texto */
+    #topo-container {
+      position: relative;
+      text-align: center;
+    }
+
+    /* Estilo para a imagem */
+    #topo-img {
+      width: 90%; /* Define a largura máxima da imagem como 100% do contêiner */
+      height:400px;
+      object-fit: cover;
+    }
+
+    /* Estilo para o texto sobre a imagem */
+    #texto-sobre-imagem {
+      position: absolute;
+      top: 40%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      color: white; /* Define a cor do texto */
+      font-size: 24px; /* Ajusta o tamanho da fonte conforme necessário */
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Contêiner que inclui a imagem e o texto -->
+  <div id="topo-container">
+    <img id="topo-img" src="static/topo2.jpg" alt="Imagem do Topo">
+    <div id="texto-sobre-imagem">
+      <h1>Hamburguers da Marina</h1>
+    </div>
+  </div>
+<h2><center>Seleção de Hamburguers</center></h2>
+  <p>
+    {% for job in jobs %}
+    {% include 'jobitem.html' %}
+    {% endfor %}
+</body>
+</html>
